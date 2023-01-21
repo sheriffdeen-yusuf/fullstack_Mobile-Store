@@ -36,6 +36,7 @@ const getOneProduct = async (req, res) => {
 // 4. Update Product
 const updateProduct = async (req, res) => {
   let req_id = req.params.id;
+
   const product = await Product.update(req.body, { where: { id: req_id } });
   res.status(200).send(product);
 };
@@ -83,7 +84,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({
   storage: storage,
-  limits: { fileSize: "2000000" },
+  limits: { fileSize: "3000000" },
   fileFilter: (req, file, cb) => {
     const fileType = /jpeg|jpg|png|gif/;
     const mimeType = fileType.test(file.mimetype);

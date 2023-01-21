@@ -37,7 +37,7 @@ const EditProduct = () => {
     };
 
     await axios.put(`http://127.0.0.1:8080/api/products/${id}`, data);
-    console.log("Updated successfully");
+    console.log("debugging");
 
     navigate("/products");
   };
@@ -45,7 +45,7 @@ const EditProduct = () => {
   return (
     <>
       <Container className="mt-5 p-3 mb-3">
-        <h1>Add Product</h1>
+        <h1>Edit Product</h1>
         <hr />
         <Form onSubmit={updateHandler}>
           <Form.Group className="mb-3" controlId="title">
@@ -81,7 +81,11 @@ const EditProduct = () => {
               type="checkbox"
               label="publish"
             />
-            {published ? <small>True</small> : <small>False</small>}
+            {published ? (
+              <small className="text-success">True</small>
+            ) : (
+              <small className="text-success">False</small>
+            )}
           </Form.Group>
 
           <Button variant="primary" type="submit">

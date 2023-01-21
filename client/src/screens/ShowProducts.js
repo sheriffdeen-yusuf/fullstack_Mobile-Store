@@ -21,15 +21,19 @@ const ShowProducts = () => {
     <Container className="justify-content-center mt-3 mb-3 p-3">
       <h1 className="text-center"> Show All Product</h1>
       <hr />
-      <Row>
-        {products.map((product) => {
-          return (
-            <>
-              <ProductCard product={product} />
-            </>
-          );
-        })}
-      </Row>
+      {products.length === 0 ? (
+        <h4>The stoke is empty at the moment</h4>
+      ) : (
+        <Row>
+          {products.map((product) => {
+            return (
+              <>
+                <ProductCard product={product} />
+              </>
+            );
+          })}
+        </Row>
+      )}
     </Container>
   );
 };

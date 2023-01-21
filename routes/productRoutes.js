@@ -12,7 +12,7 @@ import {
 import { Router } from "express";
 
 const router = Router();
-router.post("/addProduct", upload, addProduct);
+router.post("/addProduct", upload, addProduct); //Add Upload controller to enable any upload feature
 
 router.get("/allProduct/", getAllProduct);
 
