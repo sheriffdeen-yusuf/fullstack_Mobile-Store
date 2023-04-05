@@ -29,7 +29,9 @@ const Main = () => {
         <Row>
           <Col md={6}>
             <div className="mt-5" style={styles.introSection.wrapperText}>
-              <h1 class="text-center text-white">Gasby Gadgets Online Store</h1>
+              <h1 class="text-center text-white">
+                Lekenz Gadgets Online Store
+              </h1>
               <h3 class="text-center text-white ml-2">
                 your number trusted plug for gadgest...
               </h3>
